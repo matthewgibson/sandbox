@@ -7,10 +7,10 @@ int main()
 
 	int count = 0;
 
-	while (card_name != 'X')
+	while (card_name[0] != 'X')
 	{
 	
-		puts("enter the card_name:");
+		puts("enter the card_name: ");
 
 		scanf("%2s", card_name);
 
@@ -19,24 +19,24 @@ int main()
 		switch(card_name[0])
 		{
 
-		case 'K': 
+			case 'K': 
 	
-		case 'Q':
+			case 'Q':
 		
-		case 'J':
+			case 'J':
 		
 			val = 10;
 			break;
 
-		case 'A':
+			case 'A':
 		
 			val = 11;
 			break;
 
-		case 'X':
+			case 'X':
 			break;
 
-		default:
+			default:
 			val = atoi(card_name);
 
 			if (val < 1 | val > 10)
@@ -44,6 +44,7 @@ int main()
 				puts("I don't understand that value!");
 				continue;
 			}
+		}
 		if ((val > 2 ) && (val < 7))
 		{
 			count++;
@@ -52,8 +53,9 @@ int main()
 		{
 			count--;
 		}	
-		printf("The card value is: %i\n", count);
-		}
+		
+		printf("Current count: %i\n", count);
+		
 		
 	}
 
