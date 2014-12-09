@@ -6,10 +6,10 @@ typedef struct {
 	int age;
 } turtle;
 
-void happy_birthday(turtle *t)
+void happy_birthday(turtle *a)
 {
-	(*t).age = (*t).age + 1;
-	printf("Happy Birthday %s! You are now %i years old! \n", (*t).name, (*t).age);
+	a->age = a->age + 1;
+	printf("Happy Birthday %s! You are now %i years old! \n", a->name, a->age);
 }
 
 int main()
